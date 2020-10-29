@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100;1,300;1,900&display=swap');
+/*css reset*/
+body{
+    margin: 0px;
+    padding:0px;
+
+}
+/*
+h2 {
+    color: blue;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    }
+h1{
+    color: coral;
+    font-size: 35px;
+    text-align: center;
+
+}
+.heading
+{
+    font-size:1.8rem;
+ font-weight:700;
+ text-transform:uppercase;
+ padding:.5rem;
+ line-height:1;
+ margin:0;
+ margin-top:2.5rem;
+ position:relative;
+ z-index:10
+    
+
+} 
+*/
+.resume
+{   width: 800px;
+    height: auto;
+    display: flex;
+    margin:50px auto;
+    background-color: thistle;
+}
+
+ .bold{
+    margin: 0 250px;
+    font-weight: 700;
+     font-size: 20px;
+     text-transform: uppercase;
+ }
+ .semi-bold{
+     font-weight: 500;
+     font-size: 16px;
+
+ }
+ .resume .resume_left .resume_content{
+     padding: 0 25px;
+     
+ }
+
+ #resume_title{
+    padding: 0 200px;
+      display: flex;
+      text-transform: uppercase;
+      font-size:25px;
+      font-weight: bold;
+
+ }
+.address {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.summary{
+    font-weight: lighter;
+}
+.card-title{
+    font-weight: lighter;
+
+}
+
+.title{
+background-color: lightblue;
+}
