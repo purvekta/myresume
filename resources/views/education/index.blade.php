@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<link rel="stylesheet"  type="text/css" href="{{asset('css/education.css')}}">
 @section('content')
 
 <div class="mb-2">
@@ -12,9 +12,7 @@
     <div class="card-body">
         <h4 class="card-title"> {{$e->degree}} {{$e->school_name}} ({{$e->graduation_start_date}} -
             {{$e->graduation_end_date}})</h4>
-
         <a class="btn btn-sm btn-primary" href=" {{route('education.edit', $e)}} " role="button">Edit</a>
-
         <form action="{{route('education.destroy', $e)}}" method="POST" style="display: inline">
             @csrf
             @method('DELETE')

@@ -56,6 +56,7 @@ h1{
      
  }
 
+
  #resume_title{
     padding: 0 200px;
       display: flex;
@@ -65,7 +66,6 @@ h1{
 
  }
 .address {
-    display: flex;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: bold;
@@ -79,7 +79,59 @@ h1{
     font-weight: lighter;
 
 }
+#education{
+    font-family: 'Roboto', 'Roboto', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  padding: initial;
+  margin: auto;
+  background: cornflowerblue;
+  text-transform: uppercase;
 
+}
+
+
+  
+#education td,#education th{
+    border: 1px solid #ddd;
+  padding: 8px;
+}
+#education  th {
+    padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+.title{
+background-color: lightblue;
+}
+
+
+#experience{
+    font-family: 'Roboto', 'Roboto', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  padding: initial;
+  margin: auto;
+  background: cornflowerblue;
+  text-transform: uppercase;
+
+}
+
+
+  
+#experience td,#experience th{
+    border: 1px solid #ddd;
+  padding: 8px;
+}
+#experience  th {
+    padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
 .title{
 background-color: lightblue;
 }

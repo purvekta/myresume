@@ -4,6 +4,9 @@
 
 <h2>Work  Summary</h2>
 
+<div class="mt-2">
+    <a class=" btn btn-primary" href=" {{route('experience.create')}} ">+ Add Work Experience</a>
+</div>
 @foreach($experiences as $e)
 
 <div class="card">

@@ -8,7 +8,7 @@
 
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title"> {{$e->name}}  ({{$e->rating}}  </h4>
+        <h4 class="card-title"> {{$e->name}}  ({{$e->rating}})  </h4>
 
 
     <a  class="btn btn-sm btn-primary" href=" {{route('skill.edit', $e)}} " role="button">Edit</a>
@@ -29,7 +29,7 @@
 @endforeach
 
 <div class="text-right">
-    <a class=" btn btn-primary" href=" {{route('skill.index')}} " role="button">Next</a>
+    <a class=" btn btn-primary" href=" {{route('resume.index')}} " role="button">Finish</a>
 </div>
 <div class="mt-2">
     <a class=" btn btn-primary" href=" {{route('skill.create')}} ">+ Add Skill</a>

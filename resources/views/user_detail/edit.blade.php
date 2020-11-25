@@ -10,9 +10,6 @@
         @csrf
         @method('PUT')
 
-
-        
-        
         <label for="fname">First name:</label>
         <input type="text" name="fullname" id="fullname" value="{{"$userDetail->fullname"}}"><br>
         <label for="fname">Email ID:</label>
@@ -21,7 +18,7 @@
      <input type="text" name="phone" id="phone" value="{{"$userDetail->phone"}}"><br>
      <label for="fname">Address:</label>
      <input type="text" name="address" id="address" value="{{"$userDetail->address"}}"><br>
-     <label for="fname">Submit:</label>
+     <label for="fname">Summary</label>
      <input type="text" name="summary" id="summary" value="{{"$userDetail->summary"}}"><br>
      
      <input type="submit" value="submit" id="">

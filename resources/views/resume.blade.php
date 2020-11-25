@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{--<title>MyResume</title>
-<link rel="stylesheet"  type="text/css" href="{{asset('css/resumeone.css')}}">--}}
-<style type="text/css" media="all">
+    {{--<title>MyResume</title>--}}
+<link rel="stylesheet"  type="text/css" href="{{asset('css/resumeone.css')}}">
+{{-- <style type="text/css" media="all">
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100;1,300;1,900&display=swap');
 /*css reset*/
 body{
@@ -95,6 +95,7 @@ background-color: lightblue;
 }
 
 </style>
+--}}
 </head>
 <body>
 <div class="resume">
@@ -108,9 +109,7 @@ background-color: lightblue;
                     <p class="resume_title" id="resume_title"> {{$user->details->fullname}}</p>
                     {{--<p class="regular">Lecturer</p>--}}
 <p class ="address">
-   <span>{{$user->details->address}} </span>
-   <br> <span>{{$user->details->emailid}}</span>
-    <br><span>{{$user->details->phone}}</span>
+   <span>{{$user->details->address}} </span> <br> <span>{{$user->details->emailid}}</span><br><span>{{$user->details->phone}}</span>
      </p>
 <div class="resume_item resume_skills">
     <div class="title">
@@ -120,7 +119,7 @@ background-color: lightblue;
         <strong><p>{{$user->details->summary}}</p></strong>
    </section>
 </div>
-
+{{--Skills Details--}}
             <div class="resume_item resume_skills">
                 <div class="title">
                     <p class="bold">Skills</p>
@@ -144,27 +143,65 @@ background-color: lightblue;
                 </section>
             
             </div>
-            <div class="resume_item resume_skills">
+{{--Education Details--}}
+                        <div class="resume_item resume_education_table">
                 <div class="title">
-                    <p class="bold">Education Detail</p>
+                    <p class="bold">Education</p>
                 </div>
                 <section class="Education">
-                                        @foreach($user->education as $e)
-            
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title"> {{$e->degree}} {{$e->school_name}} ({{$e->graduation_start_date}} -
-                                {{$e->graduation_end_date}})</h4>
-                        </div>
-                    </div>
-                    @endforeach
+<table id ="education">
+    <tr>
+        <th>Degree</th>
+        <th>Institute</th>
+        <th>graduation startdate</th>
+        <th>end date</th>
+    </tr>
+    @foreach($user->education as $e)
+    <tr>
+        
+            <td>{{$e->Degree}}</td>
+            <td>{{$e->school_name}}</td>
+            <td>{{$e->graduation_start_date}}</td>                    
+             <td>{{$e->graduation_end_date}}</td>                   
                     
-            
+    </tr>
+    @endforeach
+</table>
+                                
                 </section>
             
             </div>
-
         </div>
+
+        {{--Experience Details--}}
+        <div class="resume_item resume_education_table">
+            <div class="title">
+                <p class="bold">Experience</p>
+            </div>
+            <section class="Experience">
+<table id ="experience">
+<tr>
+    <th>Job title</th>
+    <th>employer</th>
+    <th>startdate</th>
+    <th>end date</th>
+</tr>
+@foreach($user->experiences as $e)
+<tr>
+    
+        <td>{{$e->job_title}}</td>
+        <td>{{$e->employer}}</td>
+        <td>{{$e->start_date}}</td>                    
+         <td>{{$e->end_date}}</td>                   
+                
+</tr>
+@endforeach
+</table>
+            </section>
+        
+        </div>
+    </div>
+ </div>
     </div>
     <div class="resume_left"></div>
 </div>
